@@ -12,7 +12,7 @@ import expanding_collection
 class homeViewController: ExpandingViewController {
     typealias ItemInfo = (imageName: String, title: String)
     fileprivate var cellsIsOpen = [Bool]()
-    fileprivate let items: [ItemInfo] = [("item0", "boston"), ("item1", "new york"), ("item2", "san francisco"), ("item3", "washington")]
+    fileprivate let items: [ItemInfo] = [("item0", "boston.png"), ("item1", "new york.png"), ("item2", "san francisco.png"), ("item3", "washington.png")]
     
     
     override func viewDidLoad() {
@@ -32,9 +32,9 @@ extension homeViewController {
     
     fileprivate func registerCell() {
         
-        let nib = UINib(nibName: String(describing: homeCollectionViewCell.self), bundle: nil)
-        collectionView?.register(nib, forCellWithReuseIdentifier: String(describing: homeCollectionViewCell.self))
-        print(String(describing: homeCollectionViewCell.self))
+        let nib = UINib(nibName: String(describing: DemoCollectionViewCell.self), bundle: nil)
+        collectionView?.register(nib, forCellWithReuseIdentifier: String(describing: DemoCollectionViewCell.self))
+        print(String(describing: DemoCollectionViewCell.self))
     }
     
     fileprivate func fillCellIsOpenArray() {
@@ -70,7 +70,7 @@ extension homeViewController {
     
     @objc func swipeHandler(_ sender: UISwipeGestureRecognizer) {
         let indexPath = IndexPath(row: currentIndex, section: 0)
-        guard let cell = collectionView?.cellForItem(at: indexPath) as? homeCollectionViewCell else { return }
+        guard let cell = collectionView?.cellForItem(at: indexPath) as? DemoCollectionViewCell else { return }
         // double swipe Up transition
         if cell.isOpened == true && sender.direction == .up {
             pushToViewController(getViewController() )
@@ -99,17 +99,17 @@ extension homeViewController {
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         super.collectionView(collectionView, willDisplay: cell, forItemAt: indexPath)
-        guard let cell = cell as? homeCollectionViewCell else { return }
+        guard let cell = cell as? DemoCollectionViewCell else { return }
         
         let index = indexPath.row % items.count
         let info = items[index]
-        cell.backImage?.image = UIImage(named: info.imageName)
-        cell.titleLabel.text = info.title
+        cell.backgroundImageView?.image = UIImage(named: info.imageName)
+        cell.customTitle.text = info.title
         cell.cellIsOpen(cellsIsOpen[index], animated: false)
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? homeCollectionViewCell
+        guard let cell = collectionView.cellForItem(at: indexPath) as? DemoCollectionViewCell
             , currentIndex == indexPath.row else { return }
         
         if cell.isOpened == false {
@@ -131,7 +131,7 @@ extension homeViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: homeCollectionViewCell.self), for: indexPath)
+        return collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: DemoCollectionViewCell.self), for: indexPath)
     }
 }
 

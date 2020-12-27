@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,18 +29,25 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HHZ-Y8-JZh">
+                        <rect key="frame" x="0.0" y="0.0" width="323" height="559"/>
+                    </imageView>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="77a-zL-Q0y" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="60" id="3yU-Xg-0zO"/>
+                <constraint firstItem="HHZ-Y8-JZh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BgY-gF-RDo"/>
+                <constraint firstAttribute="trailing" secondItem="HHZ-Y8-JZh" secondAttribute="trailing" id="IW2-uk-oAX"/>
                 <constraint firstItem="MtU-CX-NVU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PIn-K9-Msr"/>
                 <constraint firstAttribute="trailing" secondItem="MtU-CX-NVU" secondAttribute="trailing" id="aau-Gg-NNR"/>
                 <constraint firstItem="77a-zL-Q0y" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="87" id="buL-hw-c0s"/>
+                <constraint firstItem="HHZ-Y8-JZh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cOl-6t-5Sl"/>
                 <constraint firstAttribute="bottom" secondItem="MtU-CX-NVU" secondAttribute="bottom" id="i0a-j3-i6X"/>
                 <constraint firstItem="MtU-CX-NVU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="j3d-OO-p5B"/>
+                <constraint firstAttribute="bottom" secondItem="HHZ-Y8-JZh" secondAttribute="bottom" id="vKn-kJ-inH"/>
                 <constraint firstAttribute="trailing" secondItem="77a-zL-Q0y" secondAttribute="trailing" constant="87" id="yp3-gL-46P"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="323" height="559"/>
             <connections>
                 <outlet property="backImage" destination="MtU-CX-NVU" id="YTj-7H-keF"/>
