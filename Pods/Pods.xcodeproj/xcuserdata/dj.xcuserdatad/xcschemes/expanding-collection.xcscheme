@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "406A9DA76CE2CF30B2D7F40478A0D8B2"
-               BlueprintName = "AnimatedCollectionViewLayout"
+               BlueprintIdentifier = "F0FBEF1B352CACB6170E589B30CCA5B0"
+               BlueprintName = "expanding-collection"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libAnimatedCollectionViewLayout.a">
+               BuildableName = "libexpanding-collection.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -3,48 +3,77 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		588B7A421B3415C5660275D7156F3A99 /* Pods-YoLoBoo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD71445CC9576A3168BF3A70F0A4797 /* Pods-YoLoBoo-dummy.m */; };
-		85015B7E8570579271076ACF2E57EF1F /* Pods-YoLoBoo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 978FC0E41EE148680CC0172C3E2FC522 /* Pods-YoLoBoo-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3AB3B233C9ECD00D3BF34E64440ADD79 /* Pods-YoLoBoo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 978FC0E41EE148680CC0172C3E2FC522 /* Pods-YoLoBoo-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3DF42F3AB130C46B2DAFD2FF16FD96FA /* ExpandingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8229411C7FEB6742FF9BB936EF94B /* ExpandingTableViewController.swift */; };
+		3ED21C3ED15F727647AD49854B91E2F8 /* expanding-collection-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C79E412C6506E49FABDDEAF994FC290 /* expanding-collection-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4F0F6A214E43F3B4C3BC3DD482DFD31A /* ConstraintsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF98394D77D1421F96C26012221F465 /* ConstraintsHelper.swift */; };
+		4FB9B19F33963ABDFBA473C683E5037D /* CornerAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E60D3AB1D0FEAE8E0587E9578F8C /* CornerAnimatable.swift */; };
+		539D0095A6C488F7381A76F21A16C50E /* ExpandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70F20CFC85188C702EDF2E328561AFA /* ExpandingViewController.swift */; };
+		5B9322E4F53EF8981B008DFB6D14E321 /* ScreenShotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EB6030D0BA1708D8CB7D7A9777C4A /* ScreenShotHelper.swift */; };
+		7F9BB19D2785DFBF0AC47875717AAD22 /* PageCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA90565CC499ED24728ABF3A9A7368F /* PageCollectionLayout.swift */; };
+		B1E78E53AF4524B161E7493F98F85C22 /* BasePageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A349C535AC0C167F84A03E29C46C4BF1 /* BasePageCollectionCell.swift */; };
+		B88EF831BD320CDD419E6905B8351E3A /* PageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D095261CE235AEF0767875DBB1780273 /* PageCollectionView.swift */; };
+		BBE8E3D00C062FD19033BE6EDA7E7BA0 /* Pods-YoLoBoo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD71445CC9576A3168BF3A70F0A4797 /* Pods-YoLoBoo-dummy.m */; };
+		D2E3D89595F8D2AC42E6D04408BB3D83 /* expanding-collection-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76367E9A360BBA80715B21CEC8757A /* expanding-collection-dummy.m */; };
+		D9B7943F7DE0BFC15959DF7BF877D374 /* ConfigurationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95739394E7ECFD069FE2B772624746D9 /* ConfigurationHelper.swift */; };
+		E7C56D4E29E87FD714ED2F0E4F8BE3F9 /* TransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514180A92C8D5DAA24108E37F3402681 /* TransitionDriver.swift */; };
+		FFA3418BD34790EF098FD7B47803FD1B /* SubviewsForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB87E49BF616268475B880A717EA8D /* SubviewsForEach.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5C8996B63B9B357CB24437931A26875A /* PBXContainerItemProxy */ = {
+		B61AF7B795798383F034CC970FD76F80 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 406A9DA76CE2CF30B2D7F40478A0D8B2;
-			remoteInfo = AnimatedCollectionViewLayout;
+			remoteGlobalIDString = F0FBEF1B352CACB6170E589B30CCA5B0;
+			remoteInfo = "expanding-collection";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D799E0F4ECF5E5B8122C5E558037F59 /* libAnimatedCollectionViewLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAnimatedCollectionViewLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E5DC9CED7BCD431D71AD3DFA3DA3B16 /* expanding-collection.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "expanding-collection.modulemap"; path = "../../Headers/Public/expanding_collection/expanding-collection.modulemap"; sourceTree = "<group>"; };
 		14489A590CF2B354082D6DC52CE36C49 /* Pods-YoLoBoo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YoLoBoo.modulemap"; sourceTree = "<group>"; };
 		1511B9B98E3EF0ECDEBC92D42D0D1950 /* Pods-YoLoBoo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YoLoBoo-resources.sh"; sourceTree = "<group>"; };
+		16D36E8E2AA19D154ABFFC8B61450C8F /* libexpanding-collection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libexpanding-collection.a"; path = "libexpanding-collection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		189EB6030D0BA1708D8CB7D7A9777C4A /* ScreenShotHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScreenShotHelper.swift; path = Source/Helpers/ScreenShot/ScreenShotHelper.swift; sourceTree = "<group>"; };
+		1B3AF42AF4741958B8B2822BD00F4F2B /* libPods-YoLoBoo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-YoLoBoo.a"; path = "libPods-YoLoBoo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BA8229411C7FEB6742FF9BB936EF94B /* ExpandingTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandingTableViewController.swift; path = Source/ExpandingTableViewController/ExpandingTableViewController.swift; sourceTree = "<group>"; };
+		2C79E412C6506E49FABDDEAF994FC290 /* expanding-collection-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "expanding-collection-umbrella.h"; path = "../../Headers/Public/expanding_collection/expanding-collection-umbrella.h"; sourceTree = "<group>"; };
 		440E8DBF3FA3764FE8C0FA8FBEB61191 /* Pods-YoLoBoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YoLoBoo.release.xcconfig"; sourceTree = "<group>"; };
+		498EE39F24CC467CD0EFE69F12302E11 /* expanding-collection.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "expanding-collection.xcconfig"; sourceTree = "<group>"; };
+		514180A92C8D5DAA24108E37F3402681 /* TransitionDriver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionDriver.swift; path = Source/TransitionDriver/TransitionDriver.swift; sourceTree = "<group>"; };
+		58FB87E49BF616268475B880A717EA8D /* SubviewsForEach.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubviewsForEach.swift; path = Source/Helpers/SubviewsForEach/SubviewsForEach.swift; sourceTree = "<group>"; };
+		6AF98394D77D1421F96C26012221F465 /* ConstraintsHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintsHelper.swift; path = "Source/Helpers/Constraints Helpers/ConstraintsHelper.swift"; sourceTree = "<group>"; };
 		7F01D6CFAF16EB37AB407F8DD8540BD2 /* Pods-YoLoBoo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YoLoBoo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		86847F5B201C5431B3FF1574F02E7844 /* expanding-collection-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "expanding-collection-prefix.pch"; sourceTree = "<group>"; };
 		8FD71445CC9576A3168BF3A70F0A4797 /* Pods-YoLoBoo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YoLoBoo-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95739394E7ECFD069FE2B772624746D9 /* ConfigurationHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConfigurationHelper.swift; path = Source/Helpers/ConfigurationHelper/ConfigurationHelper.swift; sourceTree = "<group>"; };
 		978FC0E41EE148680CC0172C3E2FC522 /* Pods-YoLoBoo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YoLoBoo-umbrella.h"; sourceTree = "<group>"; };
 		9EDEFF1F7084EE1F9D3C3060E9873BCF /* Pods-YoLoBoo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YoLoBoo-acknowledgements.plist"; sourceTree = "<group>"; };
+		A349C535AC0C167F84A03E29C46C4BF1 /* BasePageCollectionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BasePageCollectionCell.swift; path = Source/ExpandingViewController/CollectionView/Cells/BasePageCollectionCell.swift; sourceTree = "<group>"; };
+		BC76367E9A360BBA80715B21CEC8757A /* expanding-collection-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "expanding-collection-dummy.m"; sourceTree = "<group>"; };
 		C0B7AF43AA2924A44181691778DBC2A9 /* Pods-YoLoBoo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YoLoBoo-frameworks.sh"; sourceTree = "<group>"; };
-		C0D3B4A10786D98E74DA8098D02A9A16 /* libPods-YoLoBoo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YoLoBoo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B7D42A40D35932622BB68E895AEFFF /* Pods-YoLoBoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YoLoBoo.debug.xcconfig"; sourceTree = "<group>"; };
+		D095261CE235AEF0767875DBB1780273 /* PageCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageCollectionView.swift; path = Source/ExpandingViewController/CollectionView/PageCollectionView.swift; sourceTree = "<group>"; };
+		DBA90565CC499ED24728ABF3A9A7368F /* PageCollectionLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageCollectionLayout.swift; path = Source/ExpandingViewController/CollectionView/Layout/PageCollectionLayout.swift; sourceTree = "<group>"; };
+		EFF0E60D3AB1D0FEAE8E0587E9578F8C /* CornerAnimatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CornerAnimatable.swift; path = Source/Helpers/Animations/CornerAnimatable/CornerAnimatable.swift; sourceTree = "<group>"; };
+		F70F20CFC85188C702EDF2E328561AFA /* ExpandingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandingViewController.swift; path = Source/ExpandingViewController/ExpandingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0FD6C52BE954286E47626C399B549756 /* Frameworks */ = {
+		8CE02E8774510665D24C7874F07618C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AC9E9366726699C84690903384AE9A7 /* Frameworks */ = {
+		A40EA5B841CE623325D724E21F23811D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,11 +107,24 @@
 			path = "Target Support Files/Pods-YoLoBoo";
 			sourceTree = "<group>";
 		};
-		247C1B091D31CD54E52F8CAD52C50B12 /* Products */ = {
+		5C26779D773B4CDA299885C81B25A9E2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0D799E0F4ECF5E5B8122C5E558037F59 /* libAnimatedCollectionViewLayout.a */,
-				C0D3B4A10786D98E74DA8098D02A9A16 /* libPods-YoLoBoo.a */,
+				0E5DC9CED7BCD431D71AD3DFA3DA3B16 /* expanding-collection.modulemap */,
+				498EE39F24CC467CD0EFE69F12302E11 /* expanding-collection.xcconfig */,
+				BC76367E9A360BBA80715B21CEC8757A /* expanding-collection-dummy.m */,
+				86847F5B201C5431B3FF1574F02E7844 /* expanding-collection-prefix.pch */,
+				2C79E412C6506E49FABDDEAF994FC290 /* expanding-collection-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/expanding-collection";
+			sourceTree = "<group>";
+		};
+		767043E7AAD40143E25DEC14523B80C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16D36E8E2AA19D154ABFFC8B61450C8F /* libexpanding-collection.a */,
+				1B3AF42AF4741958B8B2822BD00F4F2B /* libPods-YoLoBoo.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,17 +134,38 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
-				899E3B0E3979A54B0A2D1E10EC8F64C3 /* Pods */,
-				247C1B091D31CD54E52F8CAD52C50B12 /* Products */,
+				A68267C924F111925DD431B60594330A /* Pods */,
+				767043E7AAD40143E25DEC14523B80C9 /* Products */,
 				D2165D4BC91989DA83516F3B6FD0B67E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		899E3B0E3979A54B0A2D1E10EC8F64C3 /* Pods */ = {
+		A68267C924F111925DD431B60594330A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				BB93F82A0ECF791102BFE72B0B4A6E25 /* expanding-collection */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BB93F82A0ECF791102BFE72B0B4A6E25 /* expanding-collection */ = {
+			isa = PBXGroup;
+			children = (
+				A349C535AC0C167F84A03E29C46C4BF1 /* BasePageCollectionCell.swift */,
+				95739394E7ECFD069FE2B772624746D9 /* ConfigurationHelper.swift */,
+				6AF98394D77D1421F96C26012221F465 /* ConstraintsHelper.swift */,
+				EFF0E60D3AB1D0FEAE8E0587E9578F8C /* CornerAnimatable.swift */,
+				1BA8229411C7FEB6742FF9BB936EF94B /* ExpandingTableViewController.swift */,
+				F70F20CFC85188C702EDF2E328561AFA /* ExpandingViewController.swift */,
+				DBA90565CC499ED24728ABF3A9A7368F /* PageCollectionLayout.swift */,
+				D095261CE235AEF0767875DBB1780273 /* PageCollectionView.swift */,
+				189EB6030D0BA1708D8CB7D7A9777C4A /* ScreenShotHelper.swift */,
+				58FB87E49BF616268475B880A717EA8D /* SubviewsForEach.swift */,
+				514180A92C8D5DAA24108E37F3402681 /* TransitionDriver.swift */,
+				5C26779D773B4CDA299885C81B25A9E2 /* Support Files */,
+			);
+			name = "expanding-collection";
+			path = "expanding-collection";
 			sourceTree = "<group>";
 		};
 		D2165D4BC91989DA83516F3B6FD0B67E /* Targets Support Files */ = {
@@ -116,58 +179,59 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		717F612F892AA33B01F9D15D244DD5DE /* Headers */ = {
+		7E87B128EAC7EB7D78FEC319F781DC56 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB3B233C9ECD00D3BF34E64440ADD79 /* Pods-YoLoBoo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A05D11F198F0C51CB2910C5F05D3D0BB /* Headers */ = {
+		B7FDD253DBD4668E694C8978988CD38C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85015B7E8570579271076ACF2E57EF1F /* Pods-YoLoBoo-umbrella.h in Headers */,
+				3ED21C3ED15F727647AD49854B91E2F8 /* expanding-collection-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		406A9DA76CE2CF30B2D7F40478A0D8B2 /* AnimatedCollectionViewLayout */ = {
+		D31A490D85A22D99BA90336A0DF18CB9 /* Pods-YoLoBoo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F0D792E6F25C2BAD5EB74B43BF719F16 /* Build configuration list for PBXNativeTarget "AnimatedCollectionViewLayout" */;
+			buildConfigurationList = A75B5F14AB4971C1AEC8EBF8E191F653 /* Build configuration list for PBXNativeTarget "Pods-YoLoBoo" */;
 			buildPhases = (
-				717F612F892AA33B01F9D15D244DD5DE /* Headers */,
-				1968D6E16A621F9B099BE9F50439C876 /* Sources */,
-				9AC9E9366726699C84690903384AE9A7 /* Frameworks */,
-				0A1A024609192DE13BC51E32E9DC75B8 /* Copy generated compatibility header */,
+				7E87B128EAC7EB7D78FEC319F781DC56 /* Headers */,
+				5EA005BEABC94D8BFAF5E37B3D7D467A /* Sources */,
+				A40EA5B841CE623325D724E21F23811D /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = AnimatedCollectionViewLayout;
-			productName = AnimatedCollectionViewLayout;
-			productReference = 0D799E0F4ECF5E5B8122C5E558037F59 /* libAnimatedCollectionViewLayout.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		7BE40EB981E43BA30E76E8A371DF2430 /* Pods-YoLoBoo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 60F4617D99EF1A0B57825F5ED8F9D60A /* Build configuration list for PBXNativeTarget "Pods-YoLoBoo" */;
-			buildPhases = (
-				A05D11F198F0C51CB2910C5F05D3D0BB /* Headers */,
-				282A54EC6C34863AC80B3C17040B842B /* Sources */,
-				0FD6C52BE954286E47626C399B549756 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F8B2AE7191C1FC96E40D24F10B4F4C38 /* PBXTargetDependency */,
+				D069AF1FBCB298DBE97900C150A9A4F5 /* PBXTargetDependency */,
 			);
 			name = "Pods-YoLoBoo";
 			productName = "Pods-YoLoBoo";
-			productReference = C0D3B4A10786D98E74DA8098D02A9A16 /* libPods-YoLoBoo.a */;
+			productReference = 1B3AF42AF4741958B8B2822BD00F4F2B /* libPods-YoLoBoo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F0FBEF1B352CACB6170E589B30CCA5B0 /* expanding-collection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2389A629900B195B372B4490C5F3957 /* Build configuration list for PBXNativeTarget "expanding-collection" */;
+			buildPhases = (
+				B7FDD253DBD4668E694C8978988CD38C /* Headers */,
+				6129B6E9E74D2A729575F40CB18D5E60 /* Sources */,
+				8CE02E8774510665D24C7874F07618C1 /* Frameworks */,
+				7C4D6F8E3174F5520F5D3677D0A39B9B /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "expanding-collection";
+			productName = "expanding-collection";
+			productReference = 16D36E8E2AA19D154ABFFC8B61450C8F /* libexpanding-collection.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -187,18 +251,18 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 247C1B091D31CD54E52F8CAD52C50B12 /* Products */;
+			productRefGroup = 767043E7AAD40143E25DEC14523B80C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				406A9DA76CE2CF30B2D7F40478A0D8B2 /* AnimatedCollectionViewLayout */,
-				7BE40EB981E43BA30E76E8A371DF2430 /* Pods-YoLoBoo */,
+				F0FBEF1B352CACB6170E589B30CCA5B0 /* expanding-collection */,
+				D31A490D85A22D99BA90336A0DF18CB9 /* Pods-YoLoBoo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A1A024609192DE13BC51E32E9DC75B8 /* Copy generated compatibility header */ = {
+		7C4D6F8E3174F5520F5D3677D0A39B9B /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,75 +271,89 @@
 			);
 			inputPaths = (
 				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/AnimatedCollectionViewLayout/AnimatedCollectionViewLayout.modulemap",
-				"${PODS_ROOT}/Headers/Public/AnimatedCollectionViewLayout/AnimatedCollectionViewLayout-umbrella.h",
+				"${PODS_ROOT}/Headers/Public/expanding_collection/expanding-collection.modulemap",
+				"${PODS_ROOT}/Headers/Public/expanding_collection/expanding-collection-umbrella.h",
 			);
 			name = "Copy generated compatibility header";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/AnimatedCollectionViewLayout-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/expanding-collection-umbrella.h",
 				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/AnimatedCollectionViewLayout/AnimatedCollectionViewLayout.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/AnimatedCollectionViewLayout/AnimatedCollectionViewLayout-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/expanding_collection/expanding-collection.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/expanding_collection/expanding-collection-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			showEnvVarsInLog = 1;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1968D6E16A621F9B099BE9F50439C876 /* Sources */ = {
+		5EA005BEABC94D8BFAF5E37B3D7D467A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBE8E3D00C062FD19033BE6EDA7E7BA0 /* Pods-YoLoBoo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		282A54EC6C34863AC80B3C17040B842B /* Sources */ = {
+		6129B6E9E74D2A729575F40CB18D5E60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				588B7A421B3415C5660275D7156F3A99 /* Pods-YoLoBoo-dummy.m in Sources */,
+				B1E78E53AF4524B161E7493F98F85C22 /* BasePageCollectionCell.swift in Sources */,
+				D9B7943F7DE0BFC15959DF7BF877D374 /* ConfigurationHelper.swift in Sources */,
+				4F0F6A214E43F3B4C3BC3DD482DFD31A /* ConstraintsHelper.swift in Sources */,
+				4FB9B19F33963ABDFBA473C683E5037D /* CornerAnimatable.swift in Sources */,
+				D2E3D89595F8D2AC42E6D04408BB3D83 /* expanding-collection-dummy.m in Sources */,
+				3DF42F3AB130C46B2DAFD2FF16FD96FA /* ExpandingTableViewController.swift in Sources */,
+				539D0095A6C488F7381A76F21A16C50E /* ExpandingViewController.swift in Sources */,
+				7F9BB19D2785DFBF0AC47875717AAD22 /* PageCollectionLayout.swift in Sources */,
+				B88EF831BD320CDD419E6905B8351E3A /* PageCollectionView.swift in Sources */,
+				5B9322E4F53EF8981B008DFB6D14E321 /* ScreenShotHelper.swift in Sources */,
+				FFA3418BD34790EF098FD7B47803FD1B /* SubviewsForEach.swift in Sources */,
+				E7C56D4E29E87FD714ED2F0E4F8BE3F9 /* TransitionDriver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F8B2AE7191C1FC96E40D24F10B4F4C38 /* PBXTargetDependency */ = {
+		D069AF1FBCB298DBE97900C150A9A4F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = AnimatedCollectionViewLayout;
-			target = 406A9DA76CE2CF30B2D7F40478A0D8B2 /* AnimatedCollectionViewLayout */;
-			targetProxy = 5C8996B63B9B357CB24437931A26875A /* PBXContainerItemProxy */;
+			name = "expanding-collection";
+			target = F0FBEF1B352CACB6170E589B30CCA5B0 /* expanding-collection */;
+			targetProxy = B61AF7B795798383F034CC970FD76F80 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		6C4FB00BACF1C2A4B7A474D2B6064B15 /* Debug */ = {
+		7BD33860E406C8EA19D7490F718CDA39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 440E8DBF3FA3764FE8C0FA8FBEB61191 /* Pods-YoLoBoo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/AnimatedCollectionViewLayout/AnimatedCollectionViewLayout-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/AnimatedCollectionViewLayout/AnimatedCollectionViewLayout.modulemap;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YoLoBoo/Pods-YoLoBoo.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = AnimatedCollectionViewLayout;
-				PRODUCT_NAME = AnimatedCollectionViewLayout;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		8322AE3FB6DF16A80BCBA121575DBB8A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -400,58 +478,7 @@
 			};
 			name = Release;
 		};
-		B30315E2AE58AB31472D7035C479C39C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 440E8DBF3FA3764FE8C0FA8FBEB61191 /* Pods-YoLoBoo.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-YoLoBoo/Pods-YoLoBoo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D4E895D1008D2A700068585563F0763D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/AnimatedCollectionViewLayout/AnimatedCollectionViewLayout-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/AnimatedCollectionViewLayout/AnimatedCollectionViewLayout.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = AnimatedCollectionViewLayout;
-				PRODUCT_NAME = AnimatedCollectionViewLayout;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		EE687168D0DDBFEC273793B625E97146 /* Debug */ = {
+		94C8B6C8747606FA9B9104E30985BA93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C2B7D42A40D35932622BB68E895AEFFF /* Pods-YoLoBoo.debug.xcconfig */;
 			buildSettings = {
@@ -476,6 +503,60 @@
 			};
 			name = Debug;
 		};
+		C4CD49A9B2641CAE6B5B4F11F96287B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 498EE39F24CC467CD0EFE69F12302E11 /* expanding-collection.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/expanding-collection/expanding-collection-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = "Headers/Public/expanding_collection/expanding-collection.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = expanding_collection;
+				PRODUCT_NAME = "expanding-collection";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D18AF70C712C937E961A164AC2E2AEF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 498EE39F24CC467CD0EFE69F12302E11 /* expanding-collection.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/expanding-collection/expanding-collection-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = "Headers/Public/expanding_collection/expanding-collection.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = expanding_collection;
+				PRODUCT_NAME = "expanding-collection";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -488,20 +569,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60F4617D99EF1A0B57825F5ED8F9D60A /* Build configuration list for PBXNativeTarget "Pods-YoLoBoo" */ = {
+		A75B5F14AB4971C1AEC8EBF8E191F653 /* Build configuration list for PBXNativeTarget "Pods-YoLoBoo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE687168D0DDBFEC273793B625E97146 /* Debug */,
-				B30315E2AE58AB31472D7035C479C39C /* Release */,
+				94C8B6C8747606FA9B9104E30985BA93 /* Debug */,
+				7BD33860E406C8EA19D7490F718CDA39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F0D792E6F25C2BAD5EB74B43BF719F16 /* Build configuration list for PBXNativeTarget "AnimatedCollectionViewLayout" */ = {
+		D2389A629900B195B372B4490C5F3957 /* Build configuration list for PBXNativeTarget "expanding-collection" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6C4FB00BACF1C2A4B7A474D2B6064B15 /* Debug */,
-				D4E895D1008D2A700068585563F0763D /* Release */,
+				D18AF70C712C937E961A164AC2E2AEF9 /* Debug */,
+				C4CD49A9B2641CAE6B5B4F11F96287B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

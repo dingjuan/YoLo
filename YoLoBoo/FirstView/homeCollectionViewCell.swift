@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import expanding_collection
 
-class homeCollectionViewCell: UICollectionViewCell {
+class homeCollectionViewCell: BasePageCollectionCell  {
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var backImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,7 +22,9 @@ class homeCollectionViewCell: UICollectionViewCell {
     
     func bind(color: String, imageName: String) {
         contentView.backgroundColor = color.hexColor
-        titleLabel.text = "\(arc4random_uniform(1000))"
+        titleLabel.layer.shadowRadius = 2
+        titleLabel.layer.shadowOffset = CGSize(width: 0, height: 3)
+        titleLabel.layer.shadowOpacity = 0.2
     }
 }
 

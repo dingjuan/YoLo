@@ -7,63 +7,131 @@
 //
 
 import UIKit
-import AnimatedCollectionViewLayout
+import expanding_collection
 
-private let reuseIdentifier = "Cell"
-
-class homeViewController: UICollectionViewController {
+class homeViewController: ExpandingViewController {
+    typealias ItemInfo = (imageName: String, title: String)
+    fileprivate var cellsIsOpen = [Bool]()
+    fileprivate let items: [ItemInfo] = [("item0", "boston"), ("item1", "new york"), ("item2", "san francisco"), ("item3", "washington")]
     
-   
+    
     override func viewDidLoad() {
+        itemSize = CGSize(width: 256, height: 460)
         super.viewDidLoad()
-        // Turn on the paging mode for auto snaping support.
-        collectionView?.isPagingEnabled = true
         
-       
-        // Do any additional setup after loading the view.
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
+        registerCell()
+        fillCellIsOpenArray()
+        addGesture(to: collectionView!)
+        configureNavBar()
     }
 }
 
-extension homeViewController: UICollectionViewDelegateFlowLayout {
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+extension homeViewController {
+    
+    fileprivate func registerCell() {
+        
+        let nib = UINib(nibName: String(describing: homeCollectionViewCell.self), bundle: nil)
+        collectionView?.register(nib, forCellWithReuseIdentifier: String(describing: homeCollectionViewCell.self))
+        print(String(describing: homeCollectionViewCell.self))
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Int(Int16.max)
+    fileprivate func fillCellIsOpenArray() {
+        cellsIsOpen = Array(repeating: false, count: items.count)
+    }
+    
+    fileprivate func getViewController() -> ExpandingTableViewController {
+        let toViewController: detailViewController = detailViewController()
+        return toViewController
+    }
+    
+    fileprivate func configureNavBar() {
+        navigationItem.leftBarButtonItem?.image = navigationItem.leftBarButtonItem?.image!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+    }
+}
+
+/// MARK: Gesture
+extension homeViewController {
+    
+    fileprivate func addGesture(to view: UIView) {
+
+        
+        let upGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
+        upGesture.direction = .up
+        view.addGestureRecognizer(upGesture)
+        
+        let downGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
+        downGesture.direction = .down
+       view.addGestureRecognizer(downGesture)
+   
+    }
+    
+    
+    @objc func swipeHandler(_ sender: UISwipeGestureRecognizer) {
+        let indexPath = IndexPath(row: currentIndex, section: 0)
+        guard let cell = collectionView?.cellForItem(at: indexPath) as? homeCollectionViewCell else { return }
+        // double swipe Up transition
+        if cell.isOpened == true && sender.direction == .up {
+            pushToViewController(getViewController() )
+            
+//            if let rightButton = navigationItem.rightBarButtonItem  {
+//
+//            }
+        }
+        
+        let open = sender.direction == .up ? true : false
+        cell.cellIsOpen(open)
+        cellsIsOpen[indexPath.row] = cell.isOpened
+    }
+}
+
+// MARK: UIScrollViewDelegate
+extension homeViewController {
+    
+    func scrollViewDidScroll(_: UIScrollView) {
+        //pageLabel.text = "\(currentIndex + 1)/\(items.count)"
+    }
+}
+
+// MARK: UICollectionViewDataSource
+extension homeViewController {
+    
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        super.collectionView(collectionView, willDisplay: cell, forItemAt: indexPath)
+        guard let cell = cell as? homeCollectionViewCell else { return }
+        
+        let index = indexPath.row % items.count
+        let info = items[index]
+        cell.backImage?.image = UIImage(named: info.imageName)
+        cell.titleLabel.text = info.title
+        cell.cellIsOpen(cellsIsOpen[index], animated: false)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? homeCollectionViewCell
+            , currentIndex == indexPath.row else { return }
+        
+        if cell.isOpened == false {
+            cell.cellIsOpen(true)
+        } else {
+            pushToViewController(getViewController())
+            
+            if let rightButton = navigationItem.rightBarButtonItem  {
+            }
+        }
+    }
+}
+
+// MARK: UICollectionViewDataSource
+extension homeViewController {
+    
+    override func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
+        return items.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let c = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
-        
-        if let cell = c as? homeCollectionViewCell {
-            let i = indexPath.row % vcs.count
-            let v = vcs[i]
-            cell.bind(color: v.0, imageName: v.1)
-            cell.clipsToBounds = animator?.1 ?? true
-        }
-        
-        return c
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard let animator = animator else { return view.bounds.size }
-        return CGSize(width: view.bounds.width / CGFloat(animator.2), height: view.bounds.height / CGFloat(animator.3))
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .zero
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: homeCollectionViewCell.self), for: indexPath)
     }
 }
-
-
-
 

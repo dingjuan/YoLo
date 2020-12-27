@@ -1,3 +1,3 @@
 target 'YoLoBoo' do
-  pod 'CardSlider'
+  pod 'expanding-collection'
 end

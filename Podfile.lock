@@ -1,16 +1,16 @@
 PODS:
-  - AnimatedCollectionViewLayout (0.3.0)
+  - expanding-collection (3.0.0)
 
 DEPENDENCIES:
-  - AnimatedCollectionViewLayout (~> 0.3.0)
+  - expanding-collection
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - AnimatedCollectionViewLayout
+    - expanding-collection
 
 SPEC CHECKSUMS:
-  AnimatedCollectionViewLayout: 504b992a4258eb39d2dd2b2b48e84b4b95860fd7
+  expanding-collection: 008241debdc263d25e230d6a0824a558a8f2755c
 
-PODFILE CHECKSUM: 6b349ccefbd423a61161413803cc40838cc78950
+PODFILE CHECKSUM: 5bc47ac2c77aeab1c8d68e0f78eadbaf6bdb2f8d
 
 COCOAPODS: 1.5.3
