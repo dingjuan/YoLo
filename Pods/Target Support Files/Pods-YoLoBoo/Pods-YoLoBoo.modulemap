@@ -1,0 +1,6 @@
+module Pods_YoLoBoo {
+  umbrella header "Pods-YoLoBoo-umbrella.h"
+
+  export *
+  module * { export * }
+}

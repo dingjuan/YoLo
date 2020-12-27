@@ -12,6 +12,18 @@
 		2263900525981EBA0051E2C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2263900325981EBA0051E2C4 /* Main.storyboard */; };
 		2263900725981EBD0051E2C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2263900625981EBD0051E2C4 /* Assets.xcassets */; };
 		2263900A25981EBD0051E2C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2263900825981EBD0051E2C4 /* LaunchScreen.storyboard */; };
+		2263901B259826610051E2C4 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 22639017259826610051E2C4 /* home.png */; };
+		2263901C259826610051E2C4 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 22639018259826610051E2C4 /* location.png */; };
+		2263901D259826610051E2C4 /* discovery.png in Resources */ = {isa = PBXBuildFile; fileRef = 22639019259826610051E2C4 /* discovery.png */; };
+		2263901E259826610051E2C4 /* myself.png in Resources */ = {isa = PBXBuildFile; fileRef = 2263901A259826610051E2C4 /* myself.png */; };
+		22639022259826EE0051E2C4 /* discoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22639021259826EE0051E2C4 /* discoveryViewController.swift */; };
+		22639024259827030051E2C4 /* findViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22639023259827030051E2C4 /* findViewController.swift */; };
+		22639026259827170051E2C4 /* mineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22639025259827170051E2C4 /* mineViewController.swift */; };
+		22E5486A25984E60009D50B1 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5486825984E60009D50B1 /* homeViewController.swift */; };
+		22E5486B25984E60009D50B1 /* homeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5486925984E60009D50B1 /* homeViewController.xib */; };
+		22E5486E25984E9A009D50B1 /* homeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5486C25984E9A009D50B1 /* homeCollectionViewCell.swift */; };
+		22E5486F25984E9A009D50B1 /* homeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5486D25984E9A009D50B1 /* homeCollectionViewCell.xib */; };
+		B6A5A94C88E80C1E3BE3E79C /* libPods-YoLoBoo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF03FB2E71E7C4CBBC2B934 /* libPods-YoLoBoo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +34,20 @@
 		2263900625981EBD0051E2C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2263900925981EBD0051E2C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2263900B25981EBD0051E2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22639017259826610051E2C4 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		22639018259826610051E2C4 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		22639019259826610051E2C4 /* discovery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discovery.png; sourceTree = "<group>"; };
+		2263901A259826610051E2C4 /* myself.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myself.png; sourceTree = "<group>"; };
+		22639021259826EE0051E2C4 /* discoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = discoveryViewController.swift; sourceTree = "<group>"; };
+		22639023259827030051E2C4 /* findViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findViewController.swift; sourceTree = "<group>"; };
+		22639025259827170051E2C4 /* mineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mineViewController.swift; sourceTree = "<group>"; };
+		22E5486825984E60009D50B1 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		22E5486925984E60009D50B1 /* homeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeViewController.xib; sourceTree = "<group>"; };
+		22E5486C25984E9A009D50B1 /* homeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCollectionViewCell.swift; sourceTree = "<group>"; };
+		22E5486D25984E9A009D50B1 /* homeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeCollectionViewCell.xib; sourceTree = "<group>"; };
+		2E6872FC7BFA9DFA595917B8 /* Pods-YoLoBoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoLoBoo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoLoBoo/Pods-YoLoBoo.debug.xcconfig"; sourceTree = "<group>"; };
+		7AF03FB2E71E7C4CBBC2B934 /* libPods-YoLoBoo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YoLoBoo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0FA7B3905474FBBDF35220D /* Pods-YoLoBoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoLoBoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoLoBoo/Pods-YoLoBoo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6A5A94C88E80C1E3BE3E79C /* libPods-YoLoBoo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +65,11 @@
 		22638FF325981EBA0051E2C4 = {
 			isa = PBXGroup;
 			children = (
+				22639015259826300051E2C4 /* images */,
 				22638FFE25981EBA0051E2C4 /* YoLoBoo */,
 				22638FFD25981EBA0051E2C4 /* Products */,
+				E65B2E59932EB2FA59F5178B /* Pods */,
+				E981C0168E9EC43AFB8E0C02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +84,10 @@
 		22638FFE25981EBA0051E2C4 /* YoLoBoo */ = {
 			isa = PBXGroup;
 			children = (
+				226390142598232A0051E2C4 /* Forth View */,
+				226390132598231F0051E2C4 /* Third View */,
+				22639012259823170051E2C4 /* Second View */,
+				226390112598230D0051E2C4 /* FirstView */,
 				22638FFF25981EBA0051E2C4 /* AppDelegate.swift */,
 				2263900125981EBA0051E2C4 /* ViewController.swift */,
 				2263900325981EBA0051E2C4 /* Main.storyboard */,
@@ -64,6 +98,69 @@
 			path = YoLoBoo;
 			sourceTree = "<group>";
 		};
+		226390112598230D0051E2C4 /* FirstView */ = {
+			isa = PBXGroup;
+			children = (
+				22E5486825984E60009D50B1 /* homeViewController.swift */,
+				22E5486925984E60009D50B1 /* homeViewController.xib */,
+				22E5486C25984E9A009D50B1 /* homeCollectionViewCell.swift */,
+				22E5486D25984E9A009D50B1 /* homeCollectionViewCell.xib */,
+			);
+			path = FirstView;
+			sourceTree = "<group>";
+		};
+		22639012259823170051E2C4 /* Second View */ = {
+			isa = PBXGroup;
+			children = (
+				22639021259826EE0051E2C4 /* discoveryViewController.swift */,
+			);
+			path = "Second View";
+			sourceTree = "<group>";
+		};
+		226390132598231F0051E2C4 /* Third View */ = {
+			isa = PBXGroup;
+			children = (
+				22639023259827030051E2C4 /* findViewController.swift */,
+			);
+			path = "Third View";
+			sourceTree = "<group>";
+		};
+		226390142598232A0051E2C4 /* Forth View */ = {
+			isa = PBXGroup;
+			children = (
+				22639025259827170051E2C4 /* mineViewController.swift */,
+			);
+			path = "Forth View";
+			sourceTree = "<group>";
+		};
+		22639015259826300051E2C4 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				22639019259826610051E2C4 /* discovery.png */,
+				22639017259826610051E2C4 /* home.png */,
+				22639018259826610051E2C4 /* location.png */,
+				2263901A259826610051E2C4 /* myself.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		E65B2E59932EB2FA59F5178B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E6872FC7BFA9DFA595917B8 /* Pods-YoLoBoo.debug.xcconfig */,
+				A0FA7B3905474FBBDF35220D /* Pods-YoLoBoo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E981C0168E9EC43AFB8E0C02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AF03FB2E71E7C4CBBC2B934 /* libPods-YoLoBoo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +168,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2263900E25981EBD0051E2C4 /* Build configuration list for PBXNativeTarget "YoLoBoo" */;
 			buildPhases = (
+				B929BCB81EFDEA042ED4ADBA /* [CP] Check Pods Manifest.lock */,
 				22638FF825981EBA0051E2C4 /* Sources */,
 				22638FF925981EBA0051E2C4 /* Frameworks */,
 				22638FFA25981EBA0051E2C4 /* Resources */,
@@ -122,13 +220,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2263901E259826610051E2C4 /* myself.png in Resources */,
+				2263901B259826610051E2C4 /* home.png in Resources */,
 				2263900A25981EBD0051E2C4 /* LaunchScreen.storyboard in Resources */,
+				2263901D259826610051E2C4 /* discovery.png in Resources */,
+				2263901C259826610051E2C4 /* location.png in Resources */,
 				2263900725981EBD0051E2C4 /* Assets.xcassets in Resources */,
+				22E5486F25984E9A009D50B1 /* homeCollectionViewCell.xib in Resources */,
 				2263900525981EBA0051E2C4 /* Main.storyboard in Resources */,
+				22E5486B25984E60009D50B1 /* homeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B929BCB81EFDEA042ED4ADBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YoLoBoo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		22638FF825981EBA0051E2C4 /* Sources */ = {
@@ -136,7 +265,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2263900225981EBA0051E2C4 /* ViewController.swift in Sources */,
+				22E5486A25984E60009D50B1 /* homeViewController.swift in Sources */,
+				22639026259827170051E2C4 /* mineViewController.swift in Sources */,
 				2263900025981EBA0051E2C4 /* AppDelegate.swift in Sources */,
+				22639024259827030051E2C4 /* findViewController.swift in Sources */,
+				22639022259826EE0051E2C4 /* discoveryViewController.swift in Sources */,
+				22E5486E25984E9A009D50B1 /* homeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +414,7 @@
 		};
 		2263900F25981EBD0051E2C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E6872FC7BFA9DFA595917B8 /* Pods-YoLoBoo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +433,7 @@
 		};
 		2263901025981EBD0051E2C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0FA7B3905474FBBDF35220D /* Pods-YoLoBoo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
