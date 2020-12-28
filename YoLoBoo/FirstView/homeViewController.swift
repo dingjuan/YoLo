@@ -10,25 +10,77 @@ import UIKit
 import expanding_collection
 
 class homeViewController: ExpandingViewController {
-    typealias ItemInfo = (imageName: String, title: String)
+    
+    typealias state = (name: String, capital: String, population: String, postal: String)
+    let token =  "b64eb1f0-7ab8-497d-b0ec-134c9b2e93b2"
+    let base = "https://firebasestorage.googleapis.com/v0/b/yoloboo-181a2.appspot.com/o/"
     fileprivate var cellsIsOpen = [Bool]()
-    fileprivate let items: [ItemInfo] = [("item0", "boston.png"), ("item1", "new york.png"), ("item2", "san francisco.png"), ("item3", "washington.png")]
+    //fileprivate let items: [ItemInfo] = [("boston.png", "boston"), ("new york.png", "new york"), ("san francisco.png", "san francisco"), ("washington.png", "washington")] // should load from network
+    fileprivate var items: [state]?
     
-    
+    var backgroundImageView: UIImageView!
+    var blurView: UIBlurEffect!
     override func viewDidLoad() {
         itemSize = CGSize(width: 256, height: 460)
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         
         collectionView?.delegate = self
         collectionView?.dataSource = self
+        addbackgroundBlur()
         registerCell()
         fillCellIsOpenArray()
         addGesture(to: collectionView!)
         configureNavBar()
+        fetchData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
     }
 }
 
 extension homeViewController {
+    
+    fileprivate func addbackgroundBlur() {
+        backgroundImageView = UIImageView.init(frame: view.bounds)
+        backgroundImageView.contentMode = .scaleToFill
+        
+        view.addSubview(backgroundImageView)
+    
+
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurredEffectView = UIVisualEffectView(effect: blurEffect)
+        blurredEffectView.frame = backgroundImageView.bounds
+        backgroundImageView.addSubview(blurredEffectView)
+        view.sendSubviewToBack(backgroundImageView)
+        
+
+        
+    }
+    
+    func fetchData() {
+        let _: Void = FireBaseCustomData.ref.getDocuments(completion: {(query, err) in
+            if let err = err {
+                print(err)
+            } else {
+                for document in query!.documents {
+                    print("\(document.documentID) => \(document.data())")
+
+    
+                    let data:state = document.data().mapValues( String(query))
+                    
+                    self.items?.append(data)
+                    
+                }
+                self.collectionView?.reloadData()
+                let url = "\(self.base) \(self.items?[0].postal) \(".jpg?alt=media&token:")\(self.token)"
+                self.backgroundImageView.load(url: URL.init(string: url)!)
+            }
+            
+          }
+        )
+    }
     
     fileprivate func registerCell() {
         
@@ -38,7 +90,7 @@ extension homeViewController {
     }
     
     fileprivate func fillCellIsOpenArray() {
-        cellsIsOpen = Array(repeating: false, count: items.count)
+        cellsIsOpen = Array(repeating: false, count: items?.count ?? 0)
     }
     
     fileprivate func getViewController() -> ExpandingTableViewController {
@@ -73,11 +125,9 @@ extension homeViewController {
         guard let cell = collectionView?.cellForItem(at: indexPath) as? DemoCollectionViewCell else { return }
         // double swipe Up transition
         if cell.isOpened == true && sender.direction == .up {
-            pushToViewController(getViewController() )
-            
-//            if let rightButton = navigationItem.rightBarButtonItem  {
-//
-//            }
+            guard let vc = getViewController() as? detailViewController else { return }
+            vc.backImage = cell.backgroundImageView.image
+            pushToViewController(vc)
         }
         
         let open = sender.direction == .up ? true : false
@@ -90,8 +140,12 @@ extension homeViewController {
 extension homeViewController {
     
     func scrollViewDidScroll(_: UIScrollView) {
-        //pageLabel.text = "\(currentIndex + 1)/\(items.count)"
+        let indexpath = IndexPath(row: currentIndex, section: 0)
+        let cell = collectionView?.cellForItem(at: indexpath)
+        guard let c = cell as? DemoCollectionViewCell else { return }
+        backgroundImageView.image = c.backgroundImageView.image
     }
+    
 }
 
 // MARK: UICollectionViewDataSource
@@ -101,10 +155,11 @@ extension homeViewController {
         super.collectionView(collectionView, willDisplay: cell, forItemAt: indexPath)
         guard let cell = cell as? DemoCollectionViewCell else { return }
         
-        let index = indexPath.row % items.count
-        let info = items[index]
-        cell.backgroundImageView?.image = UIImage(named: info.imageName)
-        cell.customTitle.text = info.title
+        let index = indexPath.row % items!.count
+        let info = items?[index]
+        let url = "\(self.base) \(info?.postal ?? "") \(".jpg?alt=media&token:")\(self.token)"
+        cell.backgroundImageView?.load(url: URL.init(string: url)!)
+        cell.customTitle.text = info?.name
         cell.cellIsOpen(cellsIsOpen[index], animated: false)
     }
     
@@ -116,9 +171,6 @@ extension homeViewController {
             cell.cellIsOpen(true)
         } else {
             pushToViewController(getViewController())
-            
-            if let rightButton = navigationItem.rightBarButtonItem  {
-            }
         }
     }
 }
@@ -127,7 +179,7 @@ extension homeViewController {
 extension homeViewController {
     
     override func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
-        return items.count
+        return items?.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -135,3 +187,16 @@ extension homeViewController {
     }
 }
 
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+}

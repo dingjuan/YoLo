@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>123947685423-29sb62u144gpf5mb5utg4jp88b2q76a7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.123947685423-29sb62u144gpf5mb5utg4jp88b2q76a7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCLUE9AnbvBDYE5af_X5GXPgZwEeHBFqNE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>123947685423</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>dj.YoLoBoo</string>
+	<key>PROJECT_ID</key>
+	<string>yoloboo-181a2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>yoloboo-181a2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:123947685423:ios:5fd904f2787d846c28d8da</string>
+	<key>DATABASE_URL</key>
+	<string>https://yoloboo-181a2-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

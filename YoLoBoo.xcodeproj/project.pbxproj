@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0822B0552598770A00B0CA17 /* DemoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822B0532598770A00B0CA17 /* DemoCollectionViewCell.swift */; };
 		0822B0562598770A00B0CA17 /* DemoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0822B0542598770A00B0CA17 /* DemoCollectionViewCell.xib */; };
+		0822B07925999EFD00B0CA17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0822B07825999EFD00B0CA17 /* GoogleService-Info.plist */; };
+		0822B07D25999FE600B0CA17 /* StateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822B07C25999FE600B0CA17 /* StateModel.swift */; };
+		0822B0812599A04500B0CA17 /* FireBaseCustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822B0802599A04500B0CA17 /* FireBaseCustomData.swift */; };
 		2263900025981EBA0051E2C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638FFF25981EBA0051E2C4 /* AppDelegate.swift */; };
 		2263900225981EBA0051E2C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2263900125981EBA0051E2C4 /* ViewController.swift */; };
 		2263900725981EBD0051E2C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2263900625981EBD0051E2C4 /* Assets.xcassets */; };
@@ -24,7 +27,6 @@
 		22E5486E25984E9A009D50B1 /* homeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5486C25984E9A009D50B1 /* homeCollectionViewCell.swift */; };
 		22E5486F25984E9A009D50B1 /* homeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5486D25984E9A009D50B1 /* homeCollectionViewCell.xib */; };
 		22E54873259862D1009D50B1 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E54871259862D1009D50B1 /* detailViewController.swift */; };
-		22E54874259862D1009D50B1 /* detailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E54872259862D1009D50B1 /* detailViewController.xib */; };
 		22E54876259867C1009D50B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E54875259867C1009D50B1 /* Main.storyboard */; };
 		22E5487B25986D4D009D50B1 /* washington.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E5487725986D4C009D50B1 /* washington.png */; };
 		22E5487C25986D4D009D50B1 /* san francisco.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E5487825986D4D009D50B1 /* san francisco.png */; };
@@ -36,6 +38,9 @@
 /* Begin PBXFileReference section */
 		0822B0532598770A00B0CA17 /* DemoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCollectionViewCell.swift; sourceTree = "<group>"; };
 		0822B0542598770A00B0CA17 /* DemoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoCollectionViewCell.xib; sourceTree = "<group>"; };
+		0822B07825999EFD00B0CA17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0822B07C25999FE600B0CA17 /* StateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateModel.swift; sourceTree = "<group>"; };
+		0822B0802599A04500B0CA17 /* FireBaseCustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseCustomData.swift; sourceTree = "<group>"; };
 		22638FFC25981EBA0051E2C4 /* YoLoBoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoLoBoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22638FFF25981EBA0051E2C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2263900125981EBA0051E2C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +58,6 @@
 		22E5486C25984E9A009D50B1 /* homeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCollectionViewCell.swift; sourceTree = "<group>"; };
 		22E5486D25984E9A009D50B1 /* homeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeCollectionViewCell.xib; sourceTree = "<group>"; };
 		22E54871259862D1009D50B1 /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
-		22E54872259862D1009D50B1 /* detailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = detailViewController.xib; sourceTree = "<group>"; };
 		22E54875259867C1009D50B1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		22E5487725986D4C009D50B1 /* washington.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = washington.png; sourceTree = "<group>"; };
 		22E5487825986D4D009D50B1 /* san francisco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "san francisco.png"; sourceTree = "<group>"; };
@@ -76,6 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0822B07B25999F6C00B0CA17 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				0822B07C25999FE600B0CA17 /* StateModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		0822B07F2599A02500B0CA17 /* DataBase Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				0822B0802599A04500B0CA17 /* FireBaseCustomData.swift */,
+			);
+			path = "DataBase Mapping";
+			sourceTree = "<group>";
+		};
 		22638FF325981EBA0051E2C4 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +118,8 @@
 		22638FFE25981EBA0051E2C4 /* YoLoBoo */ = {
 			isa = PBXGroup;
 			children = (
+				0822B07F2599A02500B0CA17 /* DataBase Mapping */,
+				0822B07825999EFD00B0CA17 /* GoogleService-Info.plist */,
 				226390142598232A0051E2C4 /* Forth View */,
 				226390132598231F0051E2C4 /* Third View */,
 				22639012259823170051E2C4 /* Second View */,
@@ -115,6 +137,7 @@
 		226390112598230D0051E2C4 /* FirstView */ = {
 			isa = PBXGroup;
 			children = (
+				0822B07B25999F6C00B0CA17 /* DataModel */,
 				0822B0532598770A00B0CA17 /* DemoCollectionViewCell.swift */,
 				0822B0542598770A00B0CA17 /* DemoCollectionViewCell.xib */,
 				22E54870259862AD009D50B1 /* DetailView */,
@@ -152,14 +175,14 @@
 		22639015259826300051E2C4 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				22E5487A25986D4D009D50B1 /* boston.png */,
-				22E5487925986D4D009D50B1 /* new york.png */,
-				22E5487825986D4D009D50B1 /* san francisco.png */,
-				22E5487725986D4C009D50B1 /* washington.png */,
 				22639019259826610051E2C4 /* discovery.png */,
 				22639017259826610051E2C4 /* home.png */,
 				22639018259826610051E2C4 /* location.png */,
 				2263901A259826610051E2C4 /* myself.png */,
+				22E5487A25986D4D009D50B1 /* boston.png */,
+				22E5487925986D4D009D50B1 /* new york.png */,
+				22E5487825986D4D009D50B1 /* san francisco.png */,
+				22E5487725986D4C009D50B1 /* washington.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -168,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				22E54871259862D1009D50B1 /* detailViewController.swift */,
-				22E54872259862D1009D50B1 /* detailViewController.xib */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -201,6 +223,7 @@
 				22638FF825981EBA0051E2C4 /* Sources */,
 				22638FF925981EBA0051E2C4 /* Frameworks */,
 				22638FFA25981EBA0051E2C4 /* Resources */,
+				AECC124B096AC37352FEF32B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,18 +280,35 @@
 				2263901D259826610051E2C4 /* discovery.png in Resources */,
 				2263901C259826610051E2C4 /* location.png in Resources */,
 				22E5487D25986D4D009D50B1 /* new york.png in Resources */,
-				22E54874259862D1009D50B1 /* detailViewController.xib in Resources */,
 				2263900725981EBD0051E2C4 /* Assets.xcassets in Resources */,
 				22E5487C25986D4D009D50B1 /* san francisco.png in Resources */,
 				22E5487E25986D4D009D50B1 /* boston.png in Resources */,
 				22E5487B25986D4D009D50B1 /* washington.png in Resources */,
 				22E5486F25984E9A009D50B1 /* homeCollectionViewCell.xib in Resources */,
+				0822B07925999EFD00B0CA17 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		AECC124B096AC37352FEF32B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YoLoBoo/Pods-YoLoBoo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YoLoBoo/Pods-YoLoBoo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YoLoBoo/Pods-YoLoBoo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B929BCB81EFDEA042ED4ADBA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -307,6 +347,8 @@
 				22639022259826EE0051E2C4 /* discoveryViewController.swift in Sources */,
 				22E5486E25984E9A009D50B1 /* homeCollectionViewCell.swift in Sources */,
 				22E54873259862D1009D50B1 /* detailViewController.swift in Sources */,
+				0822B07D25999FE600B0CA17 /* StateModel.swift in Sources */,
+				0822B0812599A04500B0CA17 /* FireBaseCustomData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

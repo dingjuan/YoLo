@@ -10,22 +10,60 @@ import UIKit
 import expanding_collection
 
 class detailViewController: ExpandingTableViewController {
-
+    
+    var backImage: UIImage?
+    fileprivate var scrollOffsetY: CGFloat = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Detail View"
-        // Do any additional setup after loading the view.
+        configureNavBar()
+       // tableView.backgroundView = UIImageView(image: backImage)
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        }
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
     }
-    */
-
 }
+// MARK: Helpers
+
+extension detailViewController {
+    
+    fileprivate func configureNavBar() {
+        navigationItem.leftBarButtonItem?.image = navigationItem.leftBarButtonItem?.image!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        navigationItem.rightBarButtonItem?.image = navigationItem.rightBarButtonItem?.image!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+    }
+}
+
+// MARK: Actions
+
+extension detailViewController {
+    
+    @IBAction func backButtonHandler(_: AnyObject) {
+        // buttonAnimation
+        let viewControllers: [homeViewController?] = navigationController?.viewControllers.map { $0 as? homeViewController } ?? []
+
+        for viewController in viewControllers {
+            if let rightButton = viewController?.navigationItem.rightBarButtonItem {
+                rightButton.tintColor = .clear
+                rightButton.isEnabled = false
+            }
+        }
+        popTransitionAnimation()
+    }
+}
+
+// MARK: UIScrollViewDelegate
+
+extension detailViewController {
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < -25  {
+            popTransitionAnimation()
+        }
+        scrollOffsetY = scrollView.contentOffset.y
+    }
+}
+

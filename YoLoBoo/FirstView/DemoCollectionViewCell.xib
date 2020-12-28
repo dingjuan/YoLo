@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DemoCollectionViewCell" customModule="DemoExpandingCollection" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DemoCollectionViewCell" customModule="YoLoBoo" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="256" height="335"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -26,7 +26,7 @@
                                     <constraint firstAttribute="height" constant="40" id="cUH-6u-zMD"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dots" translatesAutoresizingMaskIntoConstraints="NO" id="Au6-h8-xBa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Au6-h8-xBa">
                                 <rect key="frame" x="228" y="297.5" width="4" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="19" id="KJW-6L-1Ol"/>
@@ -182,15 +182,19 @@
                 <outlet property="backConstraintY" destination="dmf-qy-2nS" id="szE-V2-yce"/>
                 <outlet property="backContainerView" destination="rbd-6U-uYZ" id="fl2-yE-o3C"/>
                 <outlet property="backgroundImageView" destination="9FK-FA-F0l" id="kns-UF-jMo"/>
+                <outlet property="bottomLabel" destination="9FK-FA-F0l" id="Xsm-qN-wpp"/>
                 <outlet property="customTitle" destination="XFh-D7-eSl" id="eia-lY-ptu"/>
                 <outlet property="frontConstraintY" destination="0xA-8H-CCG" id="qOL-jY-lrP"/>
                 <outlet property="frontContainerView" destination="4h2-Xv-xjU" id="Mxy-UR-phd"/>
+                <outlet property="leftLabel" destination="oce-vs-fcR" id="ial-Sk-c9a"/>
+                <outlet property="numLabel" destination="9FK-FA-F0l" id="tkl-2k-Z0E"/>
+                <outlet property="rightLabel" destination="EKg-XH-vNU" id="d2G-0R-G4e"/>
+                <outlet property="sarsView" destination="9FK-FA-F0l" id="ixL-0m-ucT"/>
             </connections>
             <point key="canvasLocation" x="547" y="515.5"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="dots" width="4" height="19"/>
         <image name="icons" width="116.5" height="39.5"/>
         <image name="item0" width="414" height="736"/>
         <image name="pinIcon" width="26" height="32"/>
