@@ -10,13 +10,10 @@ import UIKit
 import expanding_collection
 
 class homeViewController: ExpandingViewController {
-    
-    typealias state = (name: String, capital: String, population: String, postal: String)
-    let token =  "b64eb1f0-7ab8-497d-b0ec-134c9b2e93b2"
     let base = "https://firebasestorage.googleapis.com/v0/b/yoloboo-181a2.appspot.com/o/"
     fileprivate var cellsIsOpen = [Bool]()
-    //fileprivate let items: [ItemInfo] = [("boston.png", "boston"), ("new york.png", "new york"), ("san francisco.png", "san francisco"), ("washington.png", "washington")] // should load from network
-    fileprivate var items: [state]?
+
+    fileprivate var items: [Dictionary<String, Any>]?
     
     var backgroundImageView: UIImageView!
     var blurView: UIBlurEffect!
@@ -24,7 +21,6 @@ class homeViewController: ExpandingViewController {
         itemSize = CGSize(width: 256, height: 460)
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
-        
         collectionView?.delegate = self
         collectionView?.dataSource = self
         addbackgroundBlur()
@@ -48,6 +44,7 @@ extension homeViewController {
         
         view.addSubview(backgroundImageView)
     
+        items = Array.init()
 
         let blurEffect = UIBlurEffect(style: .dark)
         let blurredEffectView = UIVisualEffectView(effect: blurEffect)
@@ -60,21 +57,19 @@ extension homeViewController {
     }
     
     func fetchData() {
-        let _: Void = FireBaseCustomData.ref.getDocuments(completion: {(query, err) in
+        let _: Void = FireBaseCustomData.ref.getDocuments(completion: { [self](query, err) in
             if let err = err {
                 print(err)
             } else {
                 for document in query!.documents {
-                    print("\(document.documentID) => \(document.data())")
-
-    
-                    let data:state = document.data().mapValues( String(query))
-                    
-                    self.items?.append(data)
-                    
+                    self.items?.append(document.data())
                 }
                 self.collectionView?.reloadData()
-                let url = "\(self.base) \(self.items?[0].postal) \(".jpg?alt=media&token:")\(self.token)"
+                self.fillCellIsOpenArray()
+                guard let dic = self.items?[0], let s:String = dic[state_keys.postalKey] as? String else {
+                    return
+                }
+                let url = "\(self.base)\(s)\(".jpg?alt=media")"
                 self.backgroundImageView.load(url: URL.init(string: url)!)
             }
             
@@ -157,9 +152,17 @@ extension homeViewController {
         
         let index = indexPath.row % items!.count
         let info = items?[index]
-        let url = "\(self.base) \(info?.postal ?? "") \(".jpg?alt=media&token:")\(self.token)"
-        cell.backgroundImageView?.load(url: URL.init(string: url)!)
-        cell.customTitle.text = info?.name
+        if let s = info?[state_keys.postalKey] {
+            let url = "\(self.base)\(s)\(".jpg?alt=media")"
+            cell.backgroundImageView.load(url: URL.init(string: url)!)
+        }
+     
+        cell.customTitle.text = (info?["name"] as! String)
+        cell.popLabel.text = "\("Population"):\(info?[state_keys.popKey] as? String ?? "")"
+        cell.appLabel.text = "\(info?[state_keys.postalKey] as? String ?? "")"
+        cell.mottoLabel.text = (info?["des"] as! String)
+        cell.desLabel.text = (info?["slogan"] as! String)
+
         cell.cellIsOpen(cellsIsOpen[index], animated: false)
     }
     

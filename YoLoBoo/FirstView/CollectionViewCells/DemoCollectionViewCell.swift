@@ -11,6 +11,10 @@ import expanding_collection
 
 class DemoCollectionViewCell: BasePageCollectionCell {
 
+    @IBOutlet weak var desLabel: UILabel!
+    @IBOutlet weak var mottoLabel: UILabel!
+    @IBOutlet weak var popLabel: UILabel!
+    @IBOutlet weak var appLabel: UILabel!
     @IBOutlet weak var sarsView: UIImageView!
     @IBOutlet weak var numLabel: UIImageView!
     @IBOutlet weak var bottomLabel: UIImageView!

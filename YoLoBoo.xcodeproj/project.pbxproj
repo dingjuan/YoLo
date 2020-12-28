@@ -96,6 +96,15 @@
 			path = "DataBase Mapping";
 			sourceTree = "<group>";
 		};
+		0822B085259A9C7B00B0CA17 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				0822B0532598770A00B0CA17 /* DemoCollectionViewCell.swift */,
+				0822B0542598770A00B0CA17 /* DemoCollectionViewCell.xib */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
 		22638FF325981EBA0051E2C4 = {
 			isa = PBXGroup;
 			children = (
@@ -137,9 +146,8 @@
 		226390112598230D0051E2C4 /* FirstView */ = {
 			isa = PBXGroup;
 			children = (
+				0822B085259A9C7B00B0CA17 /* CollectionViewCells */,
 				0822B07B25999F6C00B0CA17 /* DataModel */,
-				0822B0532598770A00B0CA17 /* DemoCollectionViewCell.swift */,
-				0822B0542598770A00B0CA17 /* DemoCollectionViewCell.xib */,
 				22E54870259862AD009D50B1 /* DetailView */,
 				22E5486825984E60009D50B1 /* homeViewController.swift */,
 				22E5486C25984E9A009D50B1 /* homeCollectionViewCell.swift */,
