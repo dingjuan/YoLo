@@ -51,9 +51,6 @@ extension homeViewController {
         blurredEffectView.frame = backgroundImageView.bounds
         backgroundImageView.addSubview(blurredEffectView)
         view.sendSubviewToBack(backgroundImageView)
-        
-
-        
     }
     
     func fetchData() {
@@ -102,8 +99,6 @@ extension homeViewController {
 extension homeViewController {
     
     fileprivate func addGesture(to view: UIView) {
-
-        
         let upGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
         upGesture.direction = .up
         view.addGestureRecognizer(upGesture)

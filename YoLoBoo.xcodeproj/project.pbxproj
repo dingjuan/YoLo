@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0822B0552598770A00B0CA17 /* DemoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822B0532598770A00B0CA17 /* DemoCollectionViewCell.swift */; };
-		0822B0562598770A00B0CA17 /* DemoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0822B0542598770A00B0CA17 /* DemoCollectionViewCell.xib */; };
 		0822B07925999EFD00B0CA17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0822B07825999EFD00B0CA17 /* GoogleService-Info.plist */; };
 		0822B07D25999FE600B0CA17 /* StateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822B07C25999FE600B0CA17 /* StateModel.swift */; };
 		0822B0812599A04500B0CA17 /* FireBaseCustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822B0802599A04500B0CA17 /* FireBaseCustomData.swift */; };
+		0822B1E1259AD22C00B0CA17 /* DemoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0822B1E0259AD22C00B0CA17 /* DemoCollectionViewCell.xib */; };
 		2263900025981EBA0051E2C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638FFF25981EBA0051E2C4 /* AppDelegate.swift */; };
 		2263900225981EBA0051E2C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2263900125981EBA0051E2C4 /* ViewController.swift */; };
 		2263900725981EBD0051E2C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2263900625981EBD0051E2C4 /* Assets.xcassets */; };
@@ -37,10 +37,10 @@
 
 /* Begin PBXFileReference section */
 		0822B0532598770A00B0CA17 /* DemoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCollectionViewCell.swift; sourceTree = "<group>"; };
-		0822B0542598770A00B0CA17 /* DemoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoCollectionViewCell.xib; sourceTree = "<group>"; };
 		0822B07825999EFD00B0CA17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0822B07C25999FE600B0CA17 /* StateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateModel.swift; sourceTree = "<group>"; };
 		0822B0802599A04500B0CA17 /* FireBaseCustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseCustomData.swift; sourceTree = "<group>"; };
+		0822B1E0259AD22C00B0CA17 /* DemoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoCollectionViewCell.xib; sourceTree = "<group>"; };
 		22638FFC25981EBA0051E2C4 /* YoLoBoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoLoBoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22638FFF25981EBA0051E2C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2263900125981EBA0051E2C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				0822B0532598770A00B0CA17 /* DemoCollectionViewCell.swift */,
-				0822B0542598770A00B0CA17 /* DemoCollectionViewCell.xib */,
+				0822B1E0259AD22C00B0CA17 /* DemoCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -281,7 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2263901E259826610051E2C4 /* myself.png in Resources */,
-				0822B0562598770A00B0CA17 /* DemoCollectionViewCell.xib in Resources */,
+				0822B1E1259AD22C00B0CA17 /* DemoCollectionViewCell.xib in Resources */,
 				22E54876259867C1009D50B1 /* Main.storyboard in Resources */,
 				2263901B259826610051E2C4 /* home.png in Resources */,
 				2263900A25981EBD0051E2C4 /* LaunchScreen.storyboard in Resources */,

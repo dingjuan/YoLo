@@ -15,11 +15,6 @@ class DemoCollectionViewCell: BasePageCollectionCell {
     @IBOutlet weak var mottoLabel: UILabel!
     @IBOutlet weak var popLabel: UILabel!
     @IBOutlet weak var appLabel: UILabel!
-    @IBOutlet weak var sarsView: UIImageView!
-    @IBOutlet weak var numLabel: UIImageView!
-    @IBOutlet weak var bottomLabel: UIImageView!
-    @IBOutlet weak var rightLabel: UIView!
-    @IBOutlet weak var leftLabel: UIView!
     @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet var customTitle: UILabel!
 
