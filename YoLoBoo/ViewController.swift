@@ -37,8 +37,6 @@ class ViewController: UITabBarController {
         third_page.tabBarItem = thirdBarItem
         forth_page.tabBarItem = forthBarItem
         
-        
-        
         viewControllers = [UINavigationController.init(rootViewController: first_page), second_page, third_page, forth_page]
 
     }
