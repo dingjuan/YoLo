@@ -155,8 +155,8 @@ extension homeViewController {
         cell.customTitle.text = (info?["name"] as! String)
         cell.popLabel.text = "\("Population"):\(info?[state_keys.popKey] as? String ?? "")"
         cell.appLabel.text = "\(info?[state_keys.postalKey] as? String ?? "")"
-        cell.mottoLabel.text = (info?["des"] as! String)
-        cell.desLabel.text = (info?["slogan"] as! String)
+        cell.mottoLabel.text = (info?["slogan"] as! String)
+        cell.desLabel.text = (info?["des"] as! String)
 
         cell.cellIsOpen(cellsIsOpen[index], animated: false)
     }
