@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0822B0552598770A00B0CA17 /* DemoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822B0532598770A00B0CA17 /* DemoCollectionViewCell.swift */; };
+		0822B0552598770A00B0CA17 /* homeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822B0532598770A00B0CA17 /* homeCollectionViewCell.swift */; };
 		0822B07925999EFD00B0CA17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0822B07825999EFD00B0CA17 /* GoogleService-Info.plist */; };
 		0822B07D25999FE600B0CA17 /* StateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822B07C25999FE600B0CA17 /* StateModel.swift */; };
 		0822B0812599A04500B0CA17 /* FireBaseCustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822B0802599A04500B0CA17 /* FireBaseCustomData.swift */; };
-		0822B1E1259AD22C00B0CA17 /* DemoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0822B1E0259AD22C00B0CA17 /* DemoCollectionViewCell.xib */; };
+		0822B1E1259AD22C00B0CA17 /* homeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0822B1E0259AD22C00B0CA17 /* homeCollectionViewCell.xib */; };
+		0822B1E7259BCFA300B0CA17 /* FireBaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822B1E6259BCFA300B0CA17 /* FireBaseDataService.swift */; };
+		0822B1EB259BD1A700B0CA17 /* homeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822B1EA259BD1A700B0CA17 /* homeViewModel.swift */; };
 		2263900025981EBA0051E2C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638FFF25981EBA0051E2C4 /* AppDelegate.swift */; };
 		2263900225981EBA0051E2C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2263900125981EBA0051E2C4 /* ViewController.swift */; };
 		2263900725981EBD0051E2C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2263900625981EBD0051E2C4 /* Assets.xcassets */; };
@@ -24,8 +26,6 @@
 		22639024259827030051E2C4 /* findViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22639023259827030051E2C4 /* findViewController.swift */; };
 		22639026259827170051E2C4 /* mineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22639025259827170051E2C4 /* mineViewController.swift */; };
 		22E5486A25984E60009D50B1 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5486825984E60009D50B1 /* homeViewController.swift */; };
-		22E5486E25984E9A009D50B1 /* homeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5486C25984E9A009D50B1 /* homeCollectionViewCell.swift */; };
-		22E5486F25984E9A009D50B1 /* homeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5486D25984E9A009D50B1 /* homeCollectionViewCell.xib */; };
 		22E54873259862D1009D50B1 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E54871259862D1009D50B1 /* detailViewController.swift */; };
 		22E54876259867C1009D50B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E54875259867C1009D50B1 /* Main.storyboard */; };
 		22E5487B25986D4D009D50B1 /* washington.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E5487725986D4C009D50B1 /* washington.png */; };
@@ -36,11 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0822B0532598770A00B0CA17 /* DemoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCollectionViewCell.swift; sourceTree = "<group>"; };
+		0822B0532598770A00B0CA17 /* homeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeCollectionViewCell.swift; sourceTree = "<group>"; };
 		0822B07825999EFD00B0CA17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0822B07C25999FE600B0CA17 /* StateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateModel.swift; sourceTree = "<group>"; };
 		0822B0802599A04500B0CA17 /* FireBaseCustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseCustomData.swift; sourceTree = "<group>"; };
-		0822B1E0259AD22C00B0CA17 /* DemoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoCollectionViewCell.xib; sourceTree = "<group>"; };
+		0822B1E0259AD22C00B0CA17 /* homeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = homeCollectionViewCell.xib; sourceTree = "<group>"; };
+		0822B1E6259BCFA300B0CA17 /* FireBaseDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseDataService.swift; sourceTree = "<group>"; };
+		0822B1EA259BD1A700B0CA17 /* homeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewModel.swift; sourceTree = "<group>"; };
 		22638FFC25981EBA0051E2C4 /* YoLoBoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoLoBoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22638FFF25981EBA0051E2C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2263900125981EBA0051E2C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,8 +57,6 @@
 		22639023259827030051E2C4 /* findViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findViewController.swift; sourceTree = "<group>"; };
 		22639025259827170051E2C4 /* mineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mineViewController.swift; sourceTree = "<group>"; };
 		22E5486825984E60009D50B1 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
-		22E5486C25984E9A009D50B1 /* homeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCollectionViewCell.swift; sourceTree = "<group>"; };
-		22E5486D25984E9A009D50B1 /* homeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeCollectionViewCell.xib; sourceTree = "<group>"; };
 		22E54871259862D1009D50B1 /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		22E54875259867C1009D50B1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		22E5487725986D4C009D50B1 /* washington.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = washington.png; sourceTree = "<group>"; };
@@ -84,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				0822B07C25999FE600B0CA17 /* StateModel.swift */,
+				0822B1EA259BD1A700B0CA17 /* homeViewModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -92,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				0822B0802599A04500B0CA17 /* FireBaseCustomData.swift */,
+				0822B1E6259BCFA300B0CA17 /* FireBaseDataService.swift */,
 			);
 			path = "DataBase Mapping";
 			sourceTree = "<group>";
@@ -99,8 +101,8 @@
 		0822B085259A9C7B00B0CA17 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				0822B0532598770A00B0CA17 /* DemoCollectionViewCell.swift */,
-				0822B1E0259AD22C00B0CA17 /* DemoCollectionViewCell.xib */,
+				0822B0532598770A00B0CA17 /* homeCollectionViewCell.swift */,
+				0822B1E0259AD22C00B0CA17 /* homeCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -146,12 +148,10 @@
 		226390112598230D0051E2C4 /* FirstView */ = {
 			isa = PBXGroup;
 			children = (
+				22E5486825984E60009D50B1 /* homeViewController.swift */,
 				0822B085259A9C7B00B0CA17 /* CollectionViewCells */,
 				0822B07B25999F6C00B0CA17 /* DataModel */,
 				22E54870259862AD009D50B1 /* DetailView */,
-				22E5486825984E60009D50B1 /* homeViewController.swift */,
-				22E5486C25984E9A009D50B1 /* homeCollectionViewCell.swift */,
-				22E5486D25984E9A009D50B1 /* homeCollectionViewCell.xib */,
 			);
 			path = FirstView;
 			sourceTree = "<group>";
@@ -281,7 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2263901E259826610051E2C4 /* myself.png in Resources */,
-				0822B1E1259AD22C00B0CA17 /* DemoCollectionViewCell.xib in Resources */,
+				0822B1E1259AD22C00B0CA17 /* homeCollectionViewCell.xib in Resources */,
 				22E54876259867C1009D50B1 /* Main.storyboard in Resources */,
 				2263901B259826610051E2C4 /* home.png in Resources */,
 				2263900A25981EBD0051E2C4 /* LaunchScreen.storyboard in Resources */,
@@ -292,7 +292,6 @@
 				22E5487C25986D4D009D50B1 /* san francisco.png in Resources */,
 				22E5487E25986D4D009D50B1 /* boston.png in Resources */,
 				22E5487B25986D4D009D50B1 /* washington.png in Resources */,
-				22E5486F25984E9A009D50B1 /* homeCollectionViewCell.xib in Resources */,
 				0822B07925999EFD00B0CA17 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,16 +346,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2263900225981EBA0051E2C4 /* ViewController.swift in Sources */,
-				0822B0552598770A00B0CA17 /* DemoCollectionViewCell.swift in Sources */,
+				0822B0552598770A00B0CA17 /* homeCollectionViewCell.swift in Sources */,
 				22E5486A25984E60009D50B1 /* homeViewController.swift in Sources */,
 				22639026259827170051E2C4 /* mineViewController.swift in Sources */,
 				2263900025981EBA0051E2C4 /* AppDelegate.swift in Sources */,
+				0822B1E7259BCFA300B0CA17 /* FireBaseDataService.swift in Sources */,
 				22639024259827030051E2C4 /* findViewController.swift in Sources */,
 				22639022259826EE0051E2C4 /* discoveryViewController.swift in Sources */,
-				22E5486E25984E9A009D50B1 /* homeCollectionViewCell.swift in Sources */,
 				22E54873259862D1009D50B1 /* detailViewController.swift in Sources */,
 				0822B07D25999FE600B0CA17 /* StateModel.swift in Sources */,
 				0822B0812599A04500B0CA17 /* FireBaseCustomData.swift in Sources */,
+				0822B1EB259BD1A700B0CA17 /* homeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

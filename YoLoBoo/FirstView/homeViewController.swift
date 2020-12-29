@@ -12,23 +12,29 @@ import expanding_collection
 class homeViewController: ExpandingViewController {
     let base = "https://firebasestorage.googleapis.com/v0/b/yoloboo-181a2.appspot.com/o/"
     fileprivate var cellsIsOpen = [Bool]()
-
-    fileprivate var items: [Dictionary<String, Any>]?
+    fileprivate var stateModel = homeViewModel()
     
     var backgroundImageView: UIImageView!
     var blurView: UIBlurEffect!
     override func viewDidLoad() {
         itemSize = CGSize(width: 256, height: 460)
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
-        collectionView?.delegate = self
-        collectionView?.dataSource = self
         addbackgroundBlur()
         registerCell()
-        fillCellIsOpenArray()
         addGesture(to: collectionView!)
         configureNavBar()
-        fetchData()
+        
+        
+        self.stateModel.loadingStatus = {[weak self] in
+            DispatchQueue.main.async {
+                self?.fillCellIsOpenArray()
+                self?.collectionView?.reloadData()
+                if let s = self?.stateModel.stateData?[0][state_keys.postalKey] {
+                    let url = "\(FireBaseCustomData.base)\(s)\(".jpg?alt=media")"
+                    self?.backgroundImageView.load(url: URL.init(string: url)!)
+                }
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,8 +50,6 @@ extension homeViewController {
         
         view.addSubview(backgroundImageView)
     
-        items = Array.init()
-
         let blurEffect = UIBlurEffect(style: .dark)
         let blurredEffectView = UIVisualEffectView(effect: blurEffect)
         blurredEffectView.frame = backgroundImageView.bounds
@@ -53,36 +57,16 @@ extension homeViewController {
         view.sendSubviewToBack(backgroundImageView)
     }
     
-    func fetchData() {
-        let _: Void = FireBaseCustomData.ref.getDocuments(completion: { [self](query, err) in
-            if let err = err {
-                print(err)
-            } else {
-                for document in query!.documents {
-                    self.items?.append(document.data())
-                }
-                self.collectionView?.reloadData()
-                self.fillCellIsOpenArray()
-                guard let dic = self.items?[0], let s:String = dic[state_keys.postalKey] as? String else {
-                    return
-                }
-                let url = "\(self.base)\(s)\(".jpg?alt=media")"
-                self.backgroundImageView.load(url: URL.init(string: url)!)
-            }
-            
-          }
-        )
-    }
     
     fileprivate func registerCell() {
         
-        let nib = UINib(nibName: String(describing: DemoCollectionViewCell.self), bundle: nil)
-        collectionView?.register(nib, forCellWithReuseIdentifier: String(describing: DemoCollectionViewCell.self))
-        print(String(describing: DemoCollectionViewCell.self))
+        let nib = UINib(nibName: String(describing: homeCollectionViewCell.self), bundle: nil)
+        collectionView?.register(nib, forCellWithReuseIdentifier: String(describing: homeCollectionViewCell.self))
+        print(String(describing: homeCollectionViewCell.self))
     }
     
     fileprivate func fillCellIsOpenArray() {
-        cellsIsOpen = Array(repeating: false, count: items?.count ?? 0)
+        cellsIsOpen = Array(repeating: false, count: stateModel.stateData?.count ?? 0)
     }
     
     fileprivate func getViewController() -> ExpandingTableViewController {
@@ -92,6 +76,13 @@ extension homeViewController {
     
     fileprivate func configureNavBar() {
         navigationItem.leftBarButtonItem?.image = navigationItem.leftBarButtonItem?.image!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+    }
+    
+    func reloadBackgroundImage(_ row:Int) {
+        let indexpath = IndexPath(row: currentIndex, section: 0)
+        let cell = collectionView?.cellForItem(at: indexpath)
+        guard let c = cell as? homeCollectionViewCell else { return }
+        backgroundImageView.image = c.backgroundImageView.image
     }
 }
 
@@ -112,7 +103,7 @@ extension homeViewController {
     
     @objc func swipeHandler(_ sender: UISwipeGestureRecognizer) {
         let indexPath = IndexPath(row: currentIndex, section: 0)
-        guard let cell = collectionView?.cellForItem(at: indexPath) as? DemoCollectionViewCell else { return }
+        guard let cell = collectionView?.cellForItem(at: indexPath) as? homeCollectionViewCell else { return }
         // double swipe Up transition
         if cell.isOpened == true && sender.direction == .up {
             guard let vc = getViewController() as? detailViewController else { return }
@@ -130,12 +121,9 @@ extension homeViewController {
 extension homeViewController {
     
     func scrollViewDidScroll(_: UIScrollView) {
-        let indexpath = IndexPath(row: currentIndex, section: 0)
-        let cell = collectionView?.cellForItem(at: indexpath)
-        guard let c = cell as? DemoCollectionViewCell else { return }
-        backgroundImageView.image = c.backgroundImageView.image
+        reloadBackgroundImage(currentIndex)
     }
-    
+
 }
 
 // MARK: UICollectionViewDataSource
@@ -143,26 +131,17 @@ extension homeViewController {
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         super.collectionView(collectionView, willDisplay: cell, forItemAt: indexPath)
-        guard let cell = cell as? DemoCollectionViewCell else { return }
+        guard let cell = cell as? homeCollectionViewCell else { return }
         
-        let index = indexPath.row % items!.count
-        let info = items?[index]
-        if let s = info?[state_keys.postalKey] {
-            let url = "\(self.base)\(s)\(".jpg?alt=media")"
-            cell.backgroundImageView.load(url: URL.init(string: url)!)
-        }
-     
-        cell.customTitle.text = (info?["name"] as! String)
-        cell.popLabel.text = "\("Population"):\(info?[state_keys.popKey] as? String ?? "")"
-        cell.appLabel.text = "\(info?[state_keys.postalKey] as? String ?? "")"
-        cell.mottoLabel.text = (info?["slogan"] as! String)
-        cell.desLabel.text = (info?["des"] as! String)
-
+        let index = indexPath.row % stateModel.stateData!.count
+        let info = stateModel.stateData?[index]
+        guard let data = info else { return }
+        cell.configureCell(info: data)
         cell.cellIsOpen(cellsIsOpen[index], animated: false)
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? DemoCollectionViewCell
+        guard let cell = collectionView.cellForItem(at: indexPath) as? homeCollectionViewCell
             , currentIndex == indexPath.row else { return }
         
         if cell.isOpened == false {
@@ -177,11 +156,11 @@ extension homeViewController {
 extension homeViewController {
     
     override func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
-        return items?.count ?? 0
+        return self.stateModel.stateData?.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: DemoCollectionViewCell.self), for: indexPath)
+        return collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: homeCollectionViewCell.self), for: indexPath)
     }
 }
 
