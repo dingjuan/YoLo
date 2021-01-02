@@ -36,6 +36,6 @@ class homeCollectionViewCell: BasePageCollectionCell {
         popLabel.text = "\("Population"):\(info[state_keys.popKey] as? String ?? "")"
         appLabel.text = "\(info[state_keys.postalKey] as? String ?? "")"
         mottoLabel.text = (info[state_keys.sloganKey] as! String)
-        desLabel.text = (info[state_keys.desKey] as! String)
+        desLabel.text = "\"\((info[state_keys.desKey] as! String))\""
     }
 }

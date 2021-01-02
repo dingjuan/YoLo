@@ -35,6 +35,7 @@ class homeViewController: ExpandingViewController {
                 }
             }
         }
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,7 +63,6 @@ extension homeViewController {
         
         let nib = UINib(nibName: String(describing: homeCollectionViewCell.self), bundle: nil)
         collectionView?.register(nib, forCellWithReuseIdentifier: String(describing: homeCollectionViewCell.self))
-        print(String(describing: homeCollectionViewCell.self))
     }
     
     fileprivate func fillCellIsOpenArray() {
@@ -71,6 +71,9 @@ extension homeViewController {
     
     fileprivate func getViewController() -> ExpandingTableViewController {
         let toViewController: detailViewController = detailViewController()
+        if let name:String = stateModel.stateData?[currentIndex][state_keys.postalKey] as? String {
+            toViewController.cityData = stateModel.cityData?[name] as? Array<Dictionary<String, Any>>
+        }
         return toViewController
     }
     

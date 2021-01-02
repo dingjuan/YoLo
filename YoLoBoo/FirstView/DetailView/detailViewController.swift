@@ -13,6 +13,8 @@ class detailViewController: ExpandingTableViewController {
     
     var backImage: UIImage?
     fileprivate var scrollOffsetY: CGFloat = 0
+    var cityData: Array<Dictionary<String, Any>>?
+    var states: Array<String>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,7 @@ class detailViewController: ExpandingTableViewController {
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
         }
+        registerCell()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,7 +38,38 @@ extension detailViewController {
         navigationItem.leftBarButtonItem?.image = navigationItem.leftBarButtonItem?.image!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         navigationItem.rightBarButtonItem?.image = navigationItem.rightBarButtonItem?.image!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
     }
+    
+    fileprivate func registerCell() {
+        
+        let nib = UINib(nibName: String(describing: cityTableViewCell.self), bundle: nil)
+        tableView?.register(nib, forCellReuseIdentifier: String(describing: cityTableViewCell.self))
+        tableView?.delegate = self
+        tableView?.dataSource = self
+    }
 }
+
+extension detailViewController { //UITableViewDataSource
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cityData?.count ?? 0
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
+    }
+}
+
+extension detailViewController { //UITableViewDelegate
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: cityTableViewCell.self), for: indexPath) as? cityTableViewCell
+        
+        cell?.nameLabel.text = cityData?[indexPath.row][city_keys.name] as? String ?? ""
+        
+        return cell!
+    }
+    
+}
+
 
 // MARK: Actions
 

@@ -22,3 +22,21 @@ struct state_keys {
     static let sloganKey = "slogan"
     static let desKey = "des"
 }
+
+struct city_keys {
+    static let name = "name"
+    static let latitude = "lat"
+    static let longtitude = "long"
+    static let state = "state"
+    static let code = "ansicode"
+    
+    func parseDic(_ data: Array<Any>) -> Dictionary<String, Any> {
+        var dic:Dictionary<String, Any> = Dictionary()
+        dic[city_keys.name] = data[3]
+        dic[city_keys.state] = data[0]
+        dic[city_keys.latitude] = data[10]
+        dic[city_keys.longtitude] = data[11]
+        dic[city_keys.code] = data[2]
+        return dic
+    }
+}
