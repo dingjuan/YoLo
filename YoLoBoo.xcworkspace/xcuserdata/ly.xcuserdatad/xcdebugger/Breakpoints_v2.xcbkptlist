@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4F25EAEC-9BAF-45BD-B03C-FBFAFE042E78"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YoLoBoo/FirstView/homeViewController.swift"
@@ -17,6 +17,22 @@
             startingLineNumber = "75"
             endingLineNumber = "75"
             landmarkName = "getViewController()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93240EAC-E7E0-449E-AEA4-916ED9951E9B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YoLoBoo/DataBase Mapping/FireBaseDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "fetchCities(complete:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

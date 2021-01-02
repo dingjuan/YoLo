@@ -23,6 +23,7 @@ class detailViewController: ExpandingTableViewController {
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
         }
+        tableView.separatorStyle = .none
         registerCell()
     }
     
@@ -55,7 +56,7 @@ extension detailViewController { //UITableViewDataSource
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 140.0
     }
 }
 

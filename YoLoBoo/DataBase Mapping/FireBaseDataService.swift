@@ -38,7 +38,7 @@ struct FireBaseDataService {
                     let subString = s.components(separatedBy: "\t")
                     let length = Mirror(reflecting: subString).children.count
                     if length > 11 {
-                        if let name: String = subString[0] as? String, name.contains("city") {
+                        if let name: String = subString[3] as? String, name.contains("city") {
                             let dic:Dictionary<String, Any> = city_keys().parseDic(subString)
                             let keyExists = items[subString[0]] != nil
                             if keyExists {

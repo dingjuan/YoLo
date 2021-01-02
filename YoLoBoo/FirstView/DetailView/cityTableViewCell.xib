@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jxw-hv-AcK">
-                        <rect key="frame" x="0.0" y="0.0" width="401" height="181"/>
+                        <rect key="frame" x="5" y="5" width="390" height="170"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nW-cB-1Xl">
-                                <rect key="frame" x="8" y="10" width="385" height="20.5"/>
+                                <rect key="frame" x="18" y="10" width="352" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -30,17 +30,17 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="8nW-cB-1Xl" secondAttribute="trailing" constant="8" id="9LL-h2-txK"/>
+                            <constraint firstAttribute="trailing" secondItem="8nW-cB-1Xl" secondAttribute="trailing" constant="20" symbolic="YES" id="9LL-h2-txK"/>
                             <constraint firstItem="8nW-cB-1Xl" firstAttribute="top" secondItem="Jxw-hv-AcK" secondAttribute="top" constant="10" id="CT6-wa-w00"/>
-                            <constraint firstItem="8nW-cB-1Xl" firstAttribute="leading" secondItem="Jxw-hv-AcK" secondAttribute="leading" constant="8" id="iLF-3I-4DD"/>
+                            <constraint firstItem="8nW-cB-1Xl" firstAttribute="leading" secondItem="Jxw-hv-AcK" secondAttribute="leading" constant="18" id="iLF-3I-4DD"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Jxw-hv-AcK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aBU-W9-dGP"/>
-                    <constraint firstAttribute="trailing" secondItem="Jxw-hv-AcK" secondAttribute="trailing" id="fRx-Y7-3Tx"/>
-                    <constraint firstItem="Jxw-hv-AcK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fZw-bf-NBw"/>
-                    <constraint firstAttribute="bottom" secondItem="Jxw-hv-AcK" secondAttribute="bottom" id="tdL-Dw-UKf"/>
+                    <constraint firstItem="Jxw-hv-AcK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="B9b-9L-MoP"/>
+                    <constraint firstItem="Jxw-hv-AcK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="cq2-Yw-fOf"/>
+                    <constraint firstAttribute="bottom" secondItem="Jxw-hv-AcK" secondAttribute="bottom" constant="6" id="g4N-Gi-jGB"/>
+                    <constraint firstAttribute="trailing" secondItem="Jxw-hv-AcK" secondAttribute="trailing" constant="6" id="qYE-Zf-Ezv"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -32,7 +32,9 @@ struct city_keys {
     
     func parseDic(_ data: Array<Any>) -> Dictionary<String, Any> {
         var dic:Dictionary<String, Any> = Dictionary()
-        dic[city_keys.name] = data[3]
+        if let city = data[3] as? String {
+            dic[city_keys.name] = city.replacingOccurrences(of: "city", with: "")
+        }
         dic[city_keys.state] = data[0]
         dic[city_keys.latitude] = data[10]
         dic[city_keys.longtitude] = data[11]

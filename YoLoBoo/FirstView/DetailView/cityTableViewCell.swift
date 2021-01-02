@@ -14,10 +14,11 @@ class cityTableViewCell: UITableViewCell {
     @IBOutlet weak var backView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.1)
         backView.clipsToBounds = true
-        backView.layer.cornerRadius = 5
-        backView.layer.shadowOffset = CGSize(width: 1, height: 1)
-        backView.layer.shadowColor = UIColor.gray.cgColor
+        backView.layer.cornerRadius = 10
+        backView.layer.borderColor = UIColor.white.cgColor
+        backView.layer.borderWidth = 2
         // Initialization code
     }
 
